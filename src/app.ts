@@ -114,6 +114,25 @@ function createParticle(x: number, y: number) {
     },
   });
 }
+const botones = document.querySelectorAll("button");
+
+botones.forEach((boton) => {
+  boton.addEventListener("mouseenter", () => {
+    gsap.to(cursor, {
+      scale: 1.5,
+      duration: 0.25,
+      ease: "power2.out",
+    });
+  });
+
+  boton.addEventListener("mouseleave", () => {
+    gsap.to(cursor, {
+      scale: 1,
+      duration: 0.25,
+      ease: "power2.out",
+    });
+  });
+});
 const titulo = document.querySelector(".titulos") as HTMLHeadingElement;
 const boton = document.getElementById("boton") as HTMLButtonElement;
 const boton2 = document.getElementById("botonRegreso") as HTMLButtonElement;
