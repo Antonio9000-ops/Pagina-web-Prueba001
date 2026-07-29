@@ -133,12 +133,3 @@ botones.forEach((boton) => {
     });
   });
 });
-const titulo = document.querySelector(".titulos") as HTMLHeadingElement;
-const boton = document.getElementById("boton") as HTMLButtonElement;
-const boton2 = document.getElementById("botonRegreso") as HTMLButtonElement;
-boton.addEventListener("click", () => {
-  titulo.textContent = "Hola hiciste click";
-});
-boton2.addEventListener("click", () => {
-  titulo.textContent = "Mi primera pagina";
-});

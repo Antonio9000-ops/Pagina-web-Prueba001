@@ -8,83 +8,112 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body
-    class="cursor-none bg-[url('https://i.ibb.co/bR21VW4p/image.png')] bg-no-repeat bg-cover min-h-screen bg-fixed"
+    class="cursor-none bg-no-repeat bg-center bg-cover min-h-screen"
+    style="background-image: url(&quot;./images/image-1.png&quot;)"
   >
-    <nav
-      class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl bg-blue-900 rounded-lg p-3"
-    >
-      <div class="flex items-center justify-between">
-        <span class="text-white text-lg ms-4">Mi logo</span>
+    <div class="p-3">
+      <nav class="fixed top-3 w-full px-16">
+        <div
+          class="flex items-center justify-between bg-blue-900 rounded-lg p-2 px-16"
+        >
+          <img src="/images/logo.png" class="h-10 w-10" />
+          <span class="text-white text-2xl ms-2">Craft</span>
+          <div class="flex justify-end items-center flex-1 me-4">
+            <ul class="flex gap-4 text-white mr-16">
+              <li>
+                <p class="text-2xl">Inicio</p>
+              </li>
+              <li>
+                <p class="text-2xl">Imagenes</p>
+              </li>
+            </ul>
+            <button class="text-white text-2xl">Iniciar sesion</button>
+          </div>
+        </div>
+      </nav>
+    </div>
 
-        <ul class="flex items-center gap-8 text-white me-4">
-          <li>
-            <p>Hola</p>
-          </li>
-          <li>
-            <p>Saludo</p>
-          </li>
-        </ul>
-      </div>
-    </nav>
     <img
       id="cursor"
       src="https://i.ibb.co/kVWLBjb2/pngwing-com-1.png"
       class="fixed top-0 left-0 w-10 h-10 pointer-events-none z-50 select-none"
       alt=""
     />
-    <div class="flex justify-center p-10">
-      <h1 class="titulos border text-center text-5xl text-white mt-10">
-        Bienvenidos
+    <div class="flex flex-col justify-center items-center p-10 gap-2">
+      <h1 class="titulos text-center text-4xl text-red-900 mt-10 font-bold">
+        Bienvenido "Usuario"
       </h1>
+      <p
+        class="text-slate-100 text-8xl font-medium drop-shadow text-stoke bg-green-700 rounded-full p-3 font-serif"
+      >
+        Craft World
+      </p>
     </div>
-    <div class="flex mt-28 gap-4 p-4 items-stretch">
-      <!-- Tarjeta 1 -->
-      <div class="flex-1 bg-green-800 p-8 flex flex-col rounded-lg text-white">
-        <!-- Contenido -->
-        <div class="flex-1 flex items-center justify-center gap-3">
-          <img
-            id="cursore"
-            src="https://i.ibb.co/zWfgQMJS/pngwing-com-2.png"
-            class="object-contain w-40 h-60"
-            alt=""
-          />
-
-          <div class="flex flex-col">
-            <h2 class="mt-3 bg-green-900">Nombre : Usuario</h2>
-            <h2 class="mt-2 bg-green-900">Apellido : Usuario</h2>
-            <h2 class="mt-2 bg-green-900">Usuario : Usuario</h2>
-          </div>
-        </div>
-
-        <!-- Botón -->
-        <button
-          id="boton"
-          class="text-center border-black bg-blue-500 border-4 mt-4 self-center text-slate-100 px-4 py-2 cursor-none"
+    <!-- Tarjeta padre-->
+    <div class="flex mt-20 gap-4 p-4 items-stretch bg-white flex-1">
+      <!--Contenedor 1-->
+      <div class="flex flex-1 flex-col gap-3 bg-yellow-300 p-5 items-center">
+        <!-- Tarjeta 1 -->
+        <div
+          class="bg-green-700 p-3 flex flex-col rounded-lg text-white flex-1 items-center justify-center w-full"
         >
-          Ver datos
-        </button>
-      </div>
+          <!-- Contenido -->
+          <div class="flex items-center justify-center gap-3 bg-red-400 w-auto">
+            <img
+              id="cursore"
+              src="https://i.ibb.co/zWfgQMJS/pngwing-com-2.png"
+              class="object-contain w-80 h-auto"
+              alt=""
+            />
 
+            <div
+              class="flex flex-col bg-slate-50 h-full items-center justify-center w-full p-3"
+            >
+              <h2 class="mt-3 bg-green-900 text-3xl">Nombre : Usuario</h2>
+              <h2 class="mt-2 bg-green-900 text-3xl">Apellido : Usuario</h2>
+              <h2 class="mt-2 bg-green-900 text-3xl">Usuario : Usuario</h2>
+            </div>
+          </div>
+
+          <!-- Botón -->
+        </div>
+        <!--Div boton-->
+        <div class="bg-black p-3 justify-center items-center mt-auto">
+          <button
+            id="boton"
+            class="bg-green-900 border-2 border-green-500 self-center text-white cursor-none text-xl"
+          >
+            Ver datos
+          </button>
+        </div>
+      </div>
+      <!--contenedor 2-->
       <!-- Tarjeta 2 -->
-      <div class="flex-1 bg-green-800 p-8 flex flex-col rounded-lg text-white">
+      <div
+        class="flex-1 bg-yellow-300 p-6 flex flex-col rounded-lg text-white items-center justify-center gap-4"
+      >
         <!-- Contenido -->
-        <div class="flex-1 flex flex-col items-center justify-center">
-          <h2 class="bg-green-900 mb-4">Imagen</h2>
+        <div
+          class="flex-1 flex flex-col items-center justify-center bg-green-800 p-8 rounded-lg w-full"
+        >
+          <h2 class="bg-black mb-4 text-2xl">Mobs</h2>
 
           <img
             src="https://static.vecteezy.com/system/resources/thumbnails/054/659/403/small/a-vibrant-and-colorful-minecraft-landscape-adorned-with-adorable-bunnies-and-beautiful-flowers-photo.jpg"
             alt="Imagen de Minecraft"
-            class="object-contain"
+            class="object-contain h-auto"
           />
         </div>
-
-        <!-- Botón -->
-        <button
-          id="botonRegreso"
-          class="bg-green-900 border-2 border-green-500 mt-4 self-center text-white px-4 py-2 cursor-none"
-        >
-          Titulo original
-        </button>
+        <!--Div boton2-->
+        <div class="bg-slate-800 items-center justify-center p-3">
+          <!-- Botón -->
+          <button
+            id="botonRegreso"
+            class="bg-green-900 border-2 border-green-500 self-center text-white cursor-none text-xl"
+          >
+            Más Mobs
+          </button>
+        </div>
       </div>
     </div>
 
