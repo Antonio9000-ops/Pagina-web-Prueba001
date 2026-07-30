@@ -1,3 +1,4 @@
+import { supabase } from "./supabase";
 import { gsap } from "gsap";
 
 const cursor = document.querySelector("#cursor") as HTMLImageElement;
@@ -132,4 +133,35 @@ botones.forEach((boton) => {
       ease: "power2.out",
     });
   });
+});
+
+// base de datos
+// data es un array no un objeto
+//limit es para traer solamente a una fila
+async function cargarUsuarios() {
+  const { data, error } = await supabase.from("usuarios").select("*").limit(1);
+  //para asegurarnos que exista la data del usuario y se guarde en la variable usuario
+  if (data) {
+    const usuario = data[0];
+    document.getElementById("nombre")!.textContent =
+      "Nombre : " + usuario.nombre;
+    document.getElementById("apellido")!.textContent =
+      "Apellido : " + usuario.apellido;
+
+    document.getElementById("usuario")!.textContent =
+      "Usuario : " + usuario.usuario;
+  }
+}
+
+//esto es como un molde y el usuario debe tener estas propiedades
+interface Usuario {
+  nombre: string;
+  apellido: string;
+  usuario: string;
+}
+
+const botonLogin = document.getElementById("login");
+
+botonLogin?.addEventListener("click", () => {
+  cargarUsuarios();
 });
