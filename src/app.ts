@@ -140,17 +140,27 @@ botones.forEach((boton) => {
 //limit es para traer solamente a una fila
 async function cargarUsuarios() {
   const { data, error } = await supabase.from("usuarios").select("*").limit(1);
-  //para asegurarnos que exista la data del usuario y se guarde en la variable usuario
-  if (data) {
-    const usuario = data[0];
-    document.getElementById("nombre")!.textContent =
-      "Nombre : " + usuario.nombre;
-    document.getElementById("apellido")!.textContent =
-      "Apellido : " + usuario.apellido;
 
-    document.getElementById("usuario")!.textContent =
-      "Usuario : " + usuario.usuario;
+  if (error) {
+    console.error("Error al cargar usuarios:", error);
+    alert("Error al cargar los datos. Por favor intenta nuevamente.");
+    return;
   }
+
+  if (!data || data.length === 0) {
+    alert("No se encontraron usuarios en la base de datos.");
+    return;
+  }
+
+  //para asegurarnos que exista la data del usuario y se guarde en la variable usuario
+  const usuario = data[0];
+  document.getElementById("nombre")!.textContent =
+    "Nombre : " + usuario.nombre;
+  document.getElementById("apellido")!.textContent =
+    "Apellido : " + usuario.apellido;
+
+  document.getElementById("usuario")!.textContent =
+    "Usuario : " + usuario.usuario;
 }
 
 //esto es como un molde y el usuario debe tener estas propiedades
